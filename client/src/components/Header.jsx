@@ -32,16 +32,21 @@ export default function Header() {
               About
             </li>
           </NavLink>
-          <NavLink to="/profile">
+
             {currentUser?(
+                        <NavLink to="/profile">
               <img className="rounded-full h-7 w-7" src={currentUser.avatar} alt="profile" />
+              </NavLink>
+            
             ):(
+              <NavLink to="/sign-in">
               <li className="hidden sm:inline text-slate-700 hover:underline">
               SignIn
             </li>
+            </NavLink>
             )}
 
-          </NavLink>
+ 
         </ul>
       </div>
     </header>
